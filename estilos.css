@@ -1,0 +1,173 @@
+/*PAGE*/ 
+html{
+  height: 100%;
+}
+*{  
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #D9D9D9;
+  position: relative;
+  min-height: 100vh;
+}
+header{
+  width: 100%;
+  margin: 0px;
+  position: relative;
+  height: auto; 
+  background-color: #FFCCCC;
+
+} 
+main{
+  position: relative;
+}
+
+footer{
+  background-color: #FFCCCC;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height:3 em;
+  margin:auto;
+}
+
+/*BARRA DE NAVEGACION*/
+nav{                        /*establece color de fondo de la linea de los botones*/
+  background-color:#FFCCCC;
+}
+input {                        /*no muestra el botón de menu */
+  display: none;     
+}
+label {                       /*no muestra la etiqueta ☰ */
+  display:none; 
+}
+ul{                           /*muestra los botones con la disposición horizontal para notebook */
+  display: flex;
+  justify-content:space-around;
+  margin-top:0;
+  padding: 0;
+}
+li {                     /*determina la propiedad de cada botón*/
+  display: block;
+  background: lightgrey;
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid grey;
+  width: 200px;
+  text-align: center;
+}
+li:hover { /*cambia de color el boton cuando el cursos esta sobre el mismo*/
+  filter: brightness(110%);
+  background-color: #EA8685;
+}
+/*ESTILO DE LOS TEXTOS*/
+.TituloPrincipal{ /*NOMBRE*/
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+
+}
+
+.TituloPagina{ /*SECCION DE LA PAGINA*/
+    text-align: center;
+    background-color: #EA8685;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    
+}
+.subtitulo{
+  font-family: 'Sigmar', cursive;
+  size: medium;
+  color:white;
+}
+p{
+  font-family: 'Poppins', sans-serif;
+}
+.textbutton{
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  color: black;
+
+}
+
+.contenedorflex{
+    display: flex;
+    
+} 
+.textoflex{
+  margin: 2em;
+  margin: 2em;
+  background: grey;
+  border-radius: 10px;
+  padding: 20px;
+}
+/**/
+.contenedorflex-foto{
+  display: flex;
+  
+} 
+.textoflex-foto{
+margin: 2em;
+margin: 2em;
+background: grey;
+border-radius: 10px;
+padding: 20px;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+  
+}
+img{
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+
+
+/*RESPONSIVE*/
+@media all and (max-width: 700px) {  /*cuando el dispositivo es como máximo de 700px*/
+  
+    input:checked  ~ ul{   /*muestra todas las opciones del menu (ul) */
+    display:block;
+      }
+  
+      input:checked ~ label { /*cambia su color al estar seleccionado el menu*/
+      background: white; 
+          }
+  
+    li{ /*elimina el margen  de cada botón */
+         margin: 0px;
+         text-align: left;
+     }
+  
+     label { /* dibuja la etiqueta ☰  con formato botón */
+       box-sizing: border-box;
+       display: block;
+       border: 1px solid black;
+       border-radius: 5px;
+       width: 30px;
+       height: 30px;
+       line-height: 30px;
+       font-weight: bold;
+       text-align: center;
+       user-select: none;
+       background-color: #EA8685;
+       font-family: 'Roboto Slab', serif;
+  
+      }
+    ul{  /*deja de mostrar el bloque contenedor de los botones horizontales */
+       display: none;
+       background-color:#EA8685;
+  
+      }
+     .contenedorflex{
+        flex-direction: column;
+        justify-content: center;
+     }  
+  }
+  ul li a:hover{ /*cambia el color del texto cuando el cursor esta sobre el */
+    color: white;
+  }
